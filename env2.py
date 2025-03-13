@@ -70,13 +70,7 @@ class ContinuousVacuumCleanerEnv(gym.Env):
     def reset(self):
         """Reset the environment to initial state."""
         # Agent starts at a random position
-        self.agent_position = np.array(
-            [
-                np.random.uniform(0.5, self.size - 0.5),
-                np.random.uniform(0.5, self.size - 0.5),
-            ],
-            dtype=np.float32,
-        )
+        self.agent_position = np.array([0.0, 0.0], dtype=np.float32)
 
         # Agent starts with a random orientation
         self.agent_orientation = np.random.uniform(-np.pi, np.pi)
